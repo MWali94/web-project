@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1cb3dd;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header, footer {
+    background-color: #082e75;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    color: rgb(188, 114, 114);
+    text-decoration: none;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+  }
+  
+  form input, form select, form textarea, form button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+    font-size: 1rem;
+  }
+  
