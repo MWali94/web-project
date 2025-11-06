@@ -2,9 +2,7 @@
 session_start();
 $conn = new mysqli('localhost', 'root', '', 'dentist_clinic');
 
-// Handle form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Validate required fields
     $required = ['date', 'time', 'reason'];
     foreach ($required as $field) {
         if (empty($_POST[$field])) {
@@ -12,18 +10,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // Get data from form
     $date = $_POST['date'];
     $time = $_POST['time'];
     $reason = $_POST['reason'];
-    $patient_id = $_SESSION['patient_id']; // From login session
+    $patient_id = $_SESSION['patient_id']; 
 
-    // Insert appointment
     $stmt = $conn->prepare("INSERT INTO appointments (patient_id, date, time, reason) VALUES (?, ?, ?, ?)");
     $stmt->bind_param("isss", $patient_id, $date, $time, $reason);
     
     if ($stmt->execute()) {
-        header("Location: dashboardL3.php?success=1");
+        header("Location: dashboard.php?success=1");
         exit();
     } else {
         $error = "Booking failed: " . $conn->error;
@@ -37,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Book Appointment</title>
-    <link rel="stylesheet" href="styleL3.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -52,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button type="submit">Confirm Booking</button>
         </form>
         
-        <a href="dashboardL3.php">Back to Dashboard</a>
+        <a href="dashboard.php">Back to Dashboard</a>
     </div>
 </body>
 </html>
