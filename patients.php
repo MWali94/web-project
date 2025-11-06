@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <title>Patients List</title>
-  <link rel="stylesheet" href="styleL3.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>List of Patients</h1>
     <nav>
-      <a href="staff-dashboardL3.php">Dashboard</a>
+      <a href="staff-dashboard.php">Dashboard</a>
     </nav>
   </header>
 
@@ -23,8 +23,8 @@
 
 <?php
 $host = 'localhost';
-$user = 'root'; // use your phpMyAdmin username
-$pass = '';     // use your phpMyAdmin password
+$user = 'root'; 
+$pass = '';     
 $dbname = 'dentist_clinic';
 
 $conn = new mysqli($host, $user, $pass, $dbname);
