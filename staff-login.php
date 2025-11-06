@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <title>Staff Login</title>
-  <link rel="stylesheet" href="styleL3.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>Staff Login</h1>
     <nav>
-      <a href="indexL3.php">Home</a>
-      <a href="staff-loginL3.php">Staff Login</a>
+      <a href="index.php">Home</a>
+      <a href="staff-login.php">Staff Login</a>
     </nav>
   </header>
 
@@ -33,8 +33,8 @@
 
 <?php
 $host = 'localhost';
-$user = 'root'; // use your phpMyAdmin username
-$pass = '';     // use your phpMyAdmin password
+$user = 'root'; 
+$pass = '';     
 $dbname = 'dentist_clinic';
 
 $conn = new mysqli($host, $user, $pass, $dbname);
@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if (hash('sha256', $password) === $hashed_password) {
         $_SESSION['staff_id'] = $id;
-        header("Location: staff-dashboardL3.php");
+        header("Location: staff-dashboard.php");
     } else {
         echo "Invalid login.";
     }
