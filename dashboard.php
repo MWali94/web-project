@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['patient_id'])) {
-    header("Location: loginL3.php");
+    header("Location: login.php");
     exit();
 }
 
@@ -13,12 +13,12 @@ $appointments = $conn->query("SELECT * FROM appointments WHERE patient_id = {$_S
 <html>
 <head>
     <title>Dashboard</title>
-    <link rel="stylesheet" href="styleL3.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <header>
      <nav>
-       <a href="bookL3.php" class="book-btn">Book New Appointment</a>
+       <a href="book.php" class="book-btn">Book New Appointment</a>
      </nav>
     </header>
     <h1>Welcome, <?php echo $_SESSION['patient_name']; ?></h1>
@@ -31,6 +31,6 @@ $appointments = $conn->query("SELECT * FROM appointments WHERE patient_id = {$_S
         </p>
     <?php endwhile; ?>
     
-    <a href="logoutL3.php">Logout</a>
+    <a href="logout.php">Logout</a>
 </body>
 </html>
