@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <title>Staff Dashboard</title>
-  <link rel="stylesheet" href="styleL3.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>Staff Dashboard</h1>
     <nav>
-      <a href="patientsL3.php">List of Patients</a> |
-      <a href="appointments-futureL3.php">Future Appointments</a> |
-      <a href="appointments-pastL3.php">Past Appointments</a> |
-      <a href="logoutL3.php">Logout</a>
+      <a href="patients.php">List of Patients</a> |
+      <a href="appointments-future.php">Future Appointments</a> |
+      <a href="appointments-past.php">Past Appointments</a> |
+      <a href="logout.php">Logout</a>
     </nav>
   </header>
 
@@ -30,7 +30,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['staff_id'])) {
-  header("Location: staff-loginL3.php");
+  header("Location: staff-login.php");
   exit();
 }
 ?>
