@@ -3,20 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <title>Dentist Home</title>
-  <link rel="stylesheet" href="styleL3.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>Dental Clinic</h1>
    
     <nav>
-      <a href="indexL3.php">Home</a>
-      
-      <a href="contactL3.php">Contact</a>
-      <a href="servicesL3.php">Services</a>
-      <a href="staff-loginL3.php">Staff Login</a>
-      <a href="registerL3.php">Register</a>
-      <a href="loginL3.php">Login</a>
+      <a href="index.php">Home</a>
+      <a href="contact.php">Contact</a>
+      <a href="services.php">Services</a>
+      <a href="staff-login.php">Staff Login</a>
+      <a href="register.php">Register</a>
+      <a href="login.php">Login</a>
     </nav>
 
   </header>
