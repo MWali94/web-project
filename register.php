@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ssss", $name, $email, $phone, $password);
     
     if ($stmt->execute()) {
-        header("Location: loginL3.php?success=1");
+        header("Location: login.php?success=1");
     } else {
         $error = "Registration failed: " . $conn->error;
     }
@@ -22,19 +22,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head>
     <title>Patient Registration</title>
-    <link rel="stylesheet" href="styleL3.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
   <h1>Patient Registration</h1>
     <nav>
-      <a href="indexL3.php">Home</a>
-      <a href="bookL3.php">Book Appointment</a>
-      <a href="contactL3.php">Contact</a>
-      <a href="servicesL3.php">Services</a>
-      <a href="staff-loginL3.php">Staff Login</a>
-      <a href="registerL3.php">Register</a>
-      <a href="loginL3.php">Login</a>
+      <a href="index.php">Home</a>
+      <a href="book.php">Book Appointment</a>
+      <a href="contact.php">Contact</a>
+      <a href="services.php">Services</a>
+      <a href="staff-login.php">Staff Login</a>
+      <a href="register.php">Register</a>
+      <a href="login.php">Login</a>
     </nav>
   </header>
     
@@ -45,6 +45,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="password" name="password" placeholder="Password" required><br>
         <button type="submit">Register</button>
     </form>
-    <p>Already have an account? <a href="loginL3.php">Login</a></p>
+    <p>Already have an account? <a href="login.php">Login</a></p>
 </body>
 </html>
