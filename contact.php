@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <title>Contact Us</title>
-  <link rel="stylesheet" href="styleL3.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>Contact Us</h1>
     <nav>
-      <a href="indexL3.php">Home</a>
-      <a href="bookL3.php">Book Appointment</a>
-      <a href="contactL3.php">Contact</a>
-      <a href="servicesL3.php">Services</a>
+      <a href="index.php">Home</a>
+      <a href="book.php">Book Appointment</a>
+      <a href="contact.php">Contact</a>
+      <a href="services.php">Services</a>
     </nav>
   </header>
 
