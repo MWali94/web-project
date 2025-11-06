@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <title>Future Appointments</title>
-  <link rel="stylesheet" href="styleL3.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>Future Appointments</h1>
     <nav>
-      <a href="staff-dashboardL3.php">Dashboard</a>
+      <a href="staff-dashboard.php">Dashboard</a>
     </nav>
   </header>
 
