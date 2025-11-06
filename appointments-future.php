@@ -23,8 +23,8 @@
 
 <?php
 $host = 'localhost';
-$user = 'root'; // use your phpMyAdmin username
-$pass = '';     // use your phpMyAdmin password
+$user = 'root'; 
+$pass = '';     
 $dbname = 'dentist_clinic';
 
 $conn = new mysqli($host, $user, $pass, $dbname);
