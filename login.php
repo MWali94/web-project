@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $patient['password'])) {
             $_SESSION['patient_id'] = $patient['id'];
             $_SESSION['patient_name'] = $patient['name'];
-            header("Location: dashboardL3.php");
+            header("Location: dashboard.php");
         } else {
             $error = "Invalid password!";
         }
@@ -30,18 +30,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head>
     <title>Patient Login</title>
-    <link rel="stylesheet" href="styleL3.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
  <header>
  <h1>Patient Login</h1> 
     <nav>
-      <a href="indexL3.php">Home</a>
-      <a href="bookL3.php">Book Appointment</a>
-      <a href="contactL3.php">Contact</a>
-      <a href="servicesL3.php">Services</a>
-      <a href="staff-loginL3.php">Staff Login</a>
-      <a href="registerL3.php">Register</a>
-      <a href="loginL3.php">Login</a>
+      <a href="index.php">Home</a>
+      <a href="book.php">Book Appointment</a>
+      <a href="contact.php">Contact</a>
+      <a href="services.php">Services</a>
+      <a href="staff-login.php">Staff Login</a>
+      <a href="register.php">Register</a>
+      <a href="login.php">Login</a>
     </nav>
   </header>
  <body>
@@ -54,6 +54,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="password" name="password" placeholder="Password" required><br>
         <button type="submit">Login</button>
     </form>
-    <p>New patient? <a href="registerL3.php">Register here</a></p>
+    <p>New patient? <a href="register.php">Register here</a></p>
 </body>
 </html>
